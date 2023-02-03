@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Digit
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no digit: ");
+		int n=sc.nextInt();
+		System.out.println("Enter "+ n +" digit number: ");
+		int f=sc.nextInt();
+		int sum=0;
+		while(f!=0){
+			int rem=f%10;
+			f=f/10;
+			sum=sum+rem;
+		}
+		System.out.println("Sum of "+ n +" digit number: "+sum);
+	}
+}
