@@ -1,0 +1,45 @@
+import java.util.Scanner;
+class Madd{
+	public static void main(String args[]){
+		int m,n,q,r;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number of rows in 1st matrix: ");
+		m=sc.nextInt();
+		System.out.println("Enter number of columns in 1st matrix: ");
+		n=sc.nextInt();
+		System.out.println("Enter number of rows in 2nd matrix: ");
+		q=sc.nextInt();
+		System.out.println("Enter number of columns in 2nd matrix: ");
+		r=sc.nextInt();
+		int m1[][]=new int [m][n];
+		int m2[][]=new int [q][r];
+		int m3[][]=new int [q][r];
+		if(q==m && r==n)
+		{
+			System.out.println("Enter elements of in 1st matrix: ");
+			for(int i=0;i<m;i++){
+				for(int j=0;j<n;j++){
+					m1[i][j]=sc.nextInt();
+				}
+			}
+			System.out.println("Enter elements of in 2nd matrix: ");
+			for(int i=0;i<m;i++){
+				for(int j=0;j<n;j++){
+					m2[i][j]=sc.nextInt();
+				}
+			}
+			System.out.println("Addition of matrices are: ");
+			for(int i=0;i<m;i++){
+				for(int j=0;j<n;j++){
+					m3[i][j]=m1[i][j]+m2[i][j];
+				}
+			}
+			for(int i=0;i<m;i++){
+				for(int j=0;j<n;j++){
+					System.out.print(m3[i][j]+"\t");
+				}
+				System.out.println();
+			}
+		}	
+	}
+}
